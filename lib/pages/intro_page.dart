@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
 
@@ -13,6 +12,56 @@ class _IntroPageState extends State<IntroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.shopping_bag_rounded,
+                size: 100,
+                color: Theme.of(context).colorScheme.secondary,
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+              Text(
+                'Shopping Shop',
+                style: TextStyle(
+                    color: Theme.of(context).colorScheme.secondary,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Text(
+                'On Tap Delivery',
+                style: TextStyle(
+                  color: Theme.of(context).colorScheme.primary,
+                  fontSize: 14,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.secondary,
+                  ),
+                  child: Center(
+                    child: Text(
+                      'Continue',
+                    ),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
