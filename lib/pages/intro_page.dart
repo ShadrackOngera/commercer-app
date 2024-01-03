@@ -45,7 +45,10 @@ class _IntroPageState extends State<IntroPage> {
                   fontSize: 14,
                 ),
               ),
-              PrimaryButton(),
+              PrimaryButton(
+                onTap: () {},
+                text: 'Continue',
+              ),
             ],
           ),
         ),

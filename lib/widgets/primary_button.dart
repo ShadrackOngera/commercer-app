@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatefulWidget {
-  const PrimaryButton({super.key});
+  final String text;
+  final VoidCallback onTap;
+  const PrimaryButton({
+    super.key,
+    required this.text,
+    required this.onTap,
+  });
 
   @override
   State<PrimaryButton> createState() => _PrimaryButtonState();
@@ -11,7 +17,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: widget.onTap,
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
@@ -19,7 +25,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
         ),
         child: Center(
           child: Text(
-            'Continue',
+            widget.text,
           ),
         ),
       ),
