@@ -1,3 +1,4 @@
+import 'package:commerce_app/widgets/primary_button.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatefulWidget {
@@ -44,20 +45,7 @@ class _IntroPageState extends State<IntroPage> {
                   fontSize: 14,
                 ),
               ),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Theme.of(context).colorScheme.secondary,
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Continue',
-                    ),
-                  ),
-                ),
-              )
+              PrimaryButton(),
             ],
           ),
         ),
