@@ -32,7 +32,7 @@ class _PrimaryButtonState extends State<PrimaryButton> {
             widget.text,
             style: TextStyle(
               color: Theme.of(context).colorScheme.background,
-              fontWeight: FontWeight.w500
+              // fontWeight: FontWeight.w500
             ),
           ),
         ),
